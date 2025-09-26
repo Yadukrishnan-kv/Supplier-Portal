@@ -1,10 +1,38 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import "./Header.css"
+import { useState, useEffect } from "react";
+import axios from "axios";
+import "./Header.css";
 
 const Header = () => {
-  const [searchFocused, setSearchFocused] = useState(false)
+  const [searchFocused, setSearchFocused] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const backendUrl = process.env.REACT_APP_BACKEND_IP;
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const token = localStorage.getItem("adminToken");
+        if (!token) {
+          setLoading(false);
+          return;
+        }
+        const res = await axios.get(`${backendUrl}/api/admin/profile`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        setUserData(res.data);
+      } catch (err) {
+        console.error("Error fetching profile in header:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProfile();
+  }, []);
 
   return (
     <header className="header">
@@ -47,14 +75,69 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Right Side Icons - Only User Profile Icon */}
+      {/* Right Side - User Profile Icon with Hover Dropdown */}
       <div className="right-icons">
-        <button className="icon-button profile-button">
-          <img src="/placeholder.svg?height=32&width=32" alt="User Profile" className="profile-image" />
-        </button>
+        <div
+          className="profile-wrapper"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {/* SVG User Icon */}
+          <button className="icon-button profile-button" aria-label="User profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              />
+              <path
+                d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
+
+          {/* Attractive Hover Dropdown */}
+          {isHovered && (
+            <div className="profile-dropdown">
+              {/* Header with Initial Avatar */}
+              <div className="profile-dropdown-header">
+                <div className="profile-dropdown-avatar">
+                  {userData?.username
+                    ? userData.username.charAt(0).toUpperCase()
+                    : '?'}
+                </div>
+                <div className="profile-dropdown-info">
+                  <h4>{userData?.username || 'User'}</h4>
+                  <p>{userData?.email || '—'}</p>
+                </div>
+              </div>
+
+              {/* Info Grid */}
+              <div className="profile-dropdown-body">
+                <div className="profile-info-row">
+                  <span className="profile-info-label">Email</span>
+                  <span className="profile-info-value">{userData?.email || '—'}</span>
+                </div>
+                <div className="profile-info-row">
+                  <span className="profile-info-label">Role</span>
+                  <span className="profile-info-value">
+                    {userData?.role ? (
+                      <span className="role-badge">{userData.role}</span>
+                    ) : (
+                      '—'
+                    )}
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

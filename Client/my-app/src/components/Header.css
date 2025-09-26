@@ -75,30 +75,25 @@
   border-color: #3b82f6;
 }
 
-/* Profile Button - Styled to match icon buttons */
+/* Profile Button - Now matches other icon buttons */
 .profile-button {
   width: 40px;
   height: 40px;
   padding: 0;
   border: none;
   border-radius: 50%;
-  background: transparent;
+  background-color: #f3f4f6;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  color: #6b7280;
 }
 
 .profile-button:hover {
-  background-color: #f3f4f6;
-}
-
-.profile-image {
-  width: 24px;
-  height: 24px;
-  object-fit: cover;
-  border-radius: 50%;
+  background-color: #e5e7eb;
+  color: #3b82f6;
 }
 
 /* Responsive adjustments */
@@ -122,16 +117,114 @@
     width: 36px;
     height: 36px;
   }
-
-  .profile-image {
-    width: 22px;
-    height: 22px;
-  }
 }
 
-/* Optional: Hide search on very small screens */
+/* Hide search on very small screens */
 @media (max-width: 480px) {
   .search-container {
     display: none;
+  }
+}
+
+/* === Attractive User Profile Dropdown === */
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  width: 260px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 16px -5px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eaeef2;
+  overflow: hidden;
+  z-index: 1000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.profile-dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #f9fafb;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.profile-dropdown-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e0e7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f46e5;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.profile-dropdown-info h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.profile-dropdown-info p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.profile-dropdown-body {
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.profile-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.profile-info-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+  min-width: 60px;
+}
+
+.profile-info-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e293b;
+  text-align: right;
+  max-width: 160px;
+  word-break: break-word;
+}
+
+.role-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+}
+
+/* === Mobile: Shift header content right to avoid toggle button overlap === */
+@media (max-width: 767px) {
+  .header {
+    padding-left: 75px; /* Accommodates mobile menu toggle (32px + offset) */
   }
 }

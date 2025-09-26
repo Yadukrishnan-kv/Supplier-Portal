@@ -64,8 +64,7 @@ const Sidebar = () => {
   if (loading) {
     return (
       <>
-        <button className="mobile-menu-toggle">☰</button>
-        <aside className="sidebar">Loading...</aside>
+<button className="mobile-menu-toggle">☰</button>        <aside className="sidebar">Loading...</aside>
       </>
     );
   }
@@ -93,7 +92,7 @@ const Sidebar = () => {
                 <path d="M2 12L12 17L22 12" stroke="#8B5CF6" strokeWidth="2" fill="none" />
               </svg>
             </div>
-            <span className="logo-text">VRISTO</span>
+            {/* <span className="logo-text">VRISTO</span> */}
           </div>
           <button className="collapse-btn">
             <BsChevronDoubleLeft />
@@ -134,40 +133,7 @@ const Sidebar = () => {
                 <FaAngleRight className="dropdown-arrow" />
               )}
             </button>
-            <ul className={`submenu ${activeDropdown === "dashboard" ? "show" : ""}`}>
-              <li>
-                <button
-                  className={`submenu-link ${activeItem === "sales" ? "active" : ""}`}
-                  onClick={() => handleItemClick("sales")}
-                >
-                  Sales
-                </button>
-              </li>
-              <li>
-                <button
-                  className={`submenu-link ${activeItem === "analytics" ? "active" : ""}`}
-                  onClick={() => handleItemClick("analytics")}
-                >
-                  Analytics
-                </button>
-              </li>
-              <li>
-                <button
-                  className={`submenu-link ${activeItem === "finance" ? "active" : ""}`}
-                  onClick={() => handleItemClick("finance")}
-                >
-                  Finance
-                </button>
-              </li>
-              <li>
-                <button
-                  className={`submenu-link ${activeItem === "crypto" ? "active" : ""}`}
-                  onClick={() => handleItemClick("crypto")}
-                >
-                  Crypto
-                </button>
-              </li>
-            </ul>
+            
           </div>
         </div>
 
