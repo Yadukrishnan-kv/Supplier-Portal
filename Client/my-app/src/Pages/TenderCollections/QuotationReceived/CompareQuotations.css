@@ -1,0 +1,336 @@
+/* === Compare Quotations Page Styles === */
+
+.compare-quotations-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.compare-quotations-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-quotations-content-main {
+  padding: 40px 32px;
+  flex: 1;
+}
+
+.compare-quotations-content-box {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid #e6eaf0;
+}
+
+.compare-quotations-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.compare-quotations-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dropdown */
+.compare-quotations-dropdown {
+  margin-bottom: 32px;
+}
+
+.compare-quotations-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.compare-quotations-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Messages */
+.compare-quotations-message {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.compare-quotations-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.compare-quotations-empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  font-size: 16px;
+}
+
+/* Cards Container */
+.compare-quotations-cards-container {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Single Quotation Card */
+.compare-quotation-card {
+  flex: 1;
+  min-width: 350px;
+  background: white;
+  border: 1px solid #e0e7ff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+}
+
+.compare-quotation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.compare-quotation-header {
+  padding: 16px;
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.compare-quotation-header h3 {
+  margin: 0;
+}
+
+/* Table */
+.compare-quotation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 14px;
+  table-layout: fixed;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Header Cells */
+.compare-quotation-table th {
+  background: #f1f5f9;
+  color: #1e40af;
+  text-align: center;
+  padding: 12px 10px;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #d0dce8;
+  min-width: 80px;
+}
+
+/* Data Cells */
+.compare-quotation-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  text-align: center;
+  font-size: 14px;
+  word-break: break-word;
+  min-width: 80px;
+}
+
+/* Grand Total */
+.compare-grand-total {
+  font-weight: 700;
+  color: #1e3a8a;
+  background: #eff6ff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Select Button */
+.compare-select-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: white;
+  border: none;
+  border-top: 1px solid #ef4444;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.compare-select-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.compare-selected-btn {
+  width: 100%;
+  padding: 14px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-top: 1px solid #0d9d6c;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+}
+
+.compare-selected-btn:hover {
+  background: #0d9d6c;
+}
+
+/* ✅ TABLET VIEW (768px - 1024px) */
+@media (max-width: 1024px) {
+  .compare-quotations-content-main {
+    padding: 30px 24px;
+  }
+  
+  .compare-quotations-content-box {
+    padding: 24px;
+  }
+  
+  .compare-quotations-title {
+    font-size: 26px;
+  }
+  
+  .compare-quotation-card {
+    min-width: 300px;
+  }
+  
+  .compare-quotation-table th,
+  .compare-quotation-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+  
+  .compare-grand-total,
+  .compare-select-btn,
+  .compare-selected-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+/* ✅ MOBILE VIEW (≤ 768px) */
+@media (max-width: 768px) {
+  .compare-quotations-container {
+    flex-direction: column;
+  }
+  
+  .compare-quotations-main-content {
+    padding: 0;
+  }
+  
+  .compare-quotations-content-main {
+    padding: 20px 16px;
+  }
+  
+  .compare-quotations-content-box {
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .compare-quotations-title {
+    font-size: 24px;
+  }
+  
+  .compare-quotations-cards-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .compare-quotation-card {
+    min-width: 100%;
+  }
+  
+  .compare-quotation-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .compare-quotation-table th,
+  .compare-quotation-table td {
+    padding: 8px 6px;
+    font-size: 12px;
+    min-width: 70px;
+  }
+  
+  .compare-grand-total,
+  .compare-select-btn,
+  .compare-selected-btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+/* ✅ SMALL MOBILE (≤ 480px) */
+@media (max-width: 480px) {
+  .compare-quotations-content-main {
+    padding: 16px;
+  }
+  
+  .compare-quotations-content-box {
+    padding: 16px;
+    border-radius: 10px;
+  }
+  
+  .compare-quotations-title {
+    font-size: 22px;
+  }
+  
+  .compare-quotation-card {
+    border-radius: 12px;
+  }
+  
+  .compare-quotation-table th,
+  .compare-quotation-table td {
+    padding: 6px 4px;
+    font-size: 11px;
+    min-width: 60px;
+  }
+  
+  .compare-grand-total,
+  .compare-select-btn,
+  .compare-selected-btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+  
+  .compare-quotation-header {
+    padding: 12px;
+    font-size: 16px;
+  }
+}

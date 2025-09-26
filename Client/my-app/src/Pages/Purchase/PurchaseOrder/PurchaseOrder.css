@@ -1,0 +1,145 @@
+/* PurchaseOrder.css */
+
+.PurchaseOrder-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.PurchaseOrder-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.PurchaseOrder-content-main {
+  padding: 40px 32px;
+  flex: 1;
+}
+
+.PurchaseOrder-content-box {
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid #e6eaf0;
+}
+
+.PurchaseOrder-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.PurchaseOrder-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.PurchaseOrder-table-container {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.PurchaseOrder-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.PurchaseOrder-table th {
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+  text-align: left;
+  padding: 16px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.PurchaseOrder-table th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.PurchaseOrder-table th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.PurchaseOrder-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #e8ecf0;
+  font-size: 15px;
+  color: #495057;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.PurchaseOrder-table tbody tr:hover td {
+  background-color: #f8f9ff;
+}
+
+.PurchaseOrder-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.PurchaseOrder-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.PurchaseOrder-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+.PurchaseOrder-icon-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-width: 36px;
+  min-height: 36px;
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.PurchaseOrder-icon-btn:hover {
+  background: #bae6fd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(3, 105, 161, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .PurchaseOrder-content-main {
+    padding: 20px 16px;
+  }
+  .PurchaseOrder-content-box {
+    padding: 20px;
+    border-radius: 12px;
+  }
+  .PurchaseOrder-title {
+    font-size: 24px;
+  }
+  .PurchaseOrder-table th,
+  .PurchaseOrder-table td {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+}

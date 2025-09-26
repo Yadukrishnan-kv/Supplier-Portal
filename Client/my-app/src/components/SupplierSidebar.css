@@ -1,0 +1,216 @@
+.suppliersidebar {
+  width: 280px;
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.suppliersidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f4f6;
+  background-color: #ffffff;
+}
+
+.suppliersidebar-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.suppliersidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suppliersidebar-logo-text {
+  font-size: 25px;
+  font-weight: 600;
+  color: #1f2937;
+  letter-spacing: -0.025em;
+}
+
+.suppliersidebar-collapse-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.suppliersidebar-collapse-btn:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Dashboard Section */
+.suppliersidebar-dashboard-section {
+  background-color: #ffffff;
+  padding: 8px 16px;
+  margin: 0;
+}
+
+.suppliersidebar-nav-section {
+  padding: 0;
+}
+
+.suppliersidebar-section-divider {
+  padding: 16px 20px 8px 20px;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+.suppliersidebar-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Apps Section */
+.suppliersidebar-apps-section {
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+.suppliersidebar-apps-menu-container {
+  background-color: #ffffff;
+  padding: 8px 16px;
+}
+
+.suppliersidebar-menu-item {
+  margin-bottom: 2px;
+}
+
+.suppliersidebar-menu-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 12px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #4b5563;
+  font-size: 14px;
+  text-align: left;
+}
+
+.suppliersidebar-menu-button:hover {
+  background-color: #e5e7eb;
+  color: blue;
+}
+
+.suppliersidebar-dropdown-button {
+  background-color: transparent;
+  color: #1f2937;
+}
+
+.suppliersidebar-dropdown-button:hover {
+  background-color: #e5e7eb;
+}
+
+.suppliersidebar-menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  color: inherit;
+}
+
+.suppliersidebar-menu-text {
+  flex: 1;
+  font-weight: 500;
+  color: black;
+}
+
+.suppliersidebar-dropdown-arrow {
+  margin-left: auto;
+  transition: transform 0.2s ease;
+  color: #6b7280;
+}
+
+.suppliersidebar-dropdown-arrow.rotate {
+  transform: rotate(90deg);
+}
+
+.suppliersidebar-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+  padding-left: 32px;
+  display: none;
+}
+
+.suppliersidebar-submenu.show {
+  display: block;
+}
+
+.suppliersidebar-submenu li {
+  margin-bottom: 1px;
+}
+
+.suppliersidebar-submenu-link {
+  display: block;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #6b7280;
+  text-align: left;
+  width: 100%;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  position: relative;
+}
+
+.suppliersidebar-submenu-link:hover {
+  background-color: #f3f4f6;
+  color: blue;
+}
+
+.suppliersidebar-submenu-link.active {
+  color: #3b82f6;
+  background-color: #dbeafe;
+  font-weight: 600;
+}
+
+.suppliersidebar-submenu-link.active::before {
+  content: "—";
+  position: absolute;
+  left: -8px;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+/* Scrollbar styling */
+.suppliersidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.suppliersidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.suppliersidebar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 2px;
+}
+
+.suppliersidebar::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}

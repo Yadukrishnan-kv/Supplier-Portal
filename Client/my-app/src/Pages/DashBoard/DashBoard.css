@@ -1,0 +1,65 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #f1f5f9;
+}
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #f3f4f6; /* bg-gray-100 */
+  display: flex;
+  flex-direction: column;
+}
+/* Sidebar Styles */
+aside {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+aside nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+aside nav ul li a:hover {
+  background-color: #f1f5f9;
+}
+
+/* Header Styles */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .navigation-icons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+header .user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

@@ -1,0 +1,179 @@
+/* MyQuotations.css */
+
+.my-quotations-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.my-quotations-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-quotations-content-main {
+  padding: 40px 32px;
+  flex: 1;
+}
+
+.my-quotations-content-box {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid #e6eaf0;
+}
+
+.my-quotations-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.my-quotations-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.my-quotations-message {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.my-quotations-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.my-quotations-empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  font-size: 16px;
+}
+
+.my-quotations-table-container {
+  overflow-x: auto;
+}
+
+.my-quotations-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.my-quotations-table th {
+  background: #4a90e2;
+  color: white;
+  text-align: left;
+  padding: 16px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.my-quotations-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-pending { background: #ffeaa7; color: #7b6800; }
+.status-approved { background: #dcfce7; color: #166534; }
+.status-rejected { background: #fecaca; color: #b91c1c; }
+
+.my-quotations-actions {
+  text-align: center;
+}
+
+.action-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.action-btn.edit {
+  background: #4facfe;
+  color: white;
+}
+
+.action-btn.edit:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.edit-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: monospace;
+  resize: vertical;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-save {
+  background: #10b981;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #6b7280;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .my-quotations-content-main {
+    padding: 20px 16px;
+  }
+  .my-quotations-content-box {
+    padding: 20px;
+  }
+  .my-quotations-table th,
+  .my-quotations-table td {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+}

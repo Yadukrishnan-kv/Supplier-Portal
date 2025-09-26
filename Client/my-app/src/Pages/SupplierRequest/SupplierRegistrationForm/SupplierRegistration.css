@@ -1,0 +1,349 @@
+/* Registration Form Specific Styles */
+.supplier-registration-form {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.supplier-form-header {
+  margin-bottom: 24px;
+}
+
+.supplier-form-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.supplier-form-description {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Step Indicators */
+.supplier-step-indicators {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.supplier-step-indicator {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background-color: #e5e7eb;
+  color: #6b7280;
+}
+
+.supplier-step-indicator.current {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.supplier-step-indicator.completed {
+  background-color: #10b981;
+  color: white;
+}
+
+.supplier-step-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.supplier-step-indicator.pending .supplier-step-number {
+  background-color: #9ca3af;
+  color: white;
+}
+
+/* Form Content */
+.supplier-form-content {
+  background-color: #f8fafc;
+  padding: 24px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  min-height: 400px;
+}
+
+.supplier-form-section {
+  width: 100%;
+}
+
+.supplier-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.supplier-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.supplier-form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.supplier-form-input,
+.supplier-form-select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  background-color: white;
+}
+
+.supplier-form-input:focus,
+.supplier-form-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.supplier-form-select:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Error Styles */
+.supplier-form-input-error {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+
+.supplier-form-error {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.supplier-form-error-center {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+/* Custom Form Grid Layout */
+.supplier-form-grid-custom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.supplier-form-row {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+}
+
+.supplier-form-group-small {
+  flex: 1;
+}
+
+.supplier-form-group-large {
+  flex: 2;
+}
+
+.supplier-form-group-equal {
+  flex: 1;
+}
+
+.supplier-form-group-full {
+  flex: 1;
+  width: 100%;
+}
+
+/* File Input Styling */
+.supplier-form-file {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.supplier-form-file:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Product Services Styling */
+.supplier-form-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.supplier-category-group {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.supplier-category-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.supplier-subcategory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.supplier-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.supplier-checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.supplier-checkbox-label {
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  user-select: none;
+}
+
+.supplier-checkbox-label:hover {
+  color: #3b82f6;
+}
+
+/* Navigation */
+.supplier-form-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.supplier-btn {
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.supplier-btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.supplier-btn-primary:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.supplier-btn-primary:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.supplier-btn-secondary {
+  background-color: #6b7280;
+  color: white;
+}
+
+.supplier-btn-secondary:hover:not(:disabled) {
+  background-color: #4b5563;
+}
+
+.supplier-btn-secondary:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.supplier-message {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.supplier-message-icon {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.supplier-error {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.supplier-success {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .supplier-step-indicators {
+    flex-direction: column;
+  }
+
+  .supplier-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .supplier-form-navigation {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .supplier-btn {
+    width: 100%;
+  }
+
+  .supplier-form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .supplier-form-group-small,
+  .supplier-form-group-large,
+  .supplier-form-group-equal {
+    flex: 1;
+  }
+
+  .supplier-form-categories {
+    grid-template-columns: 1fr;
+  }
+}

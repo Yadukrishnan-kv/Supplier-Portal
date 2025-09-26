@@ -1,0 +1,275 @@
+/* Container */
+.addsubadmin-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Main content area */
+.addsubadmin-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content spacing */
+.addsubadmin-content-main {
+  padding: 40px 32px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* Content box */
+.addsubadmin-content-box {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+}
+
+/* Header */
+.addsubadmin-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #f0f2f5;
+  position: relative;
+}
+
+.addsubadmin-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+}
+
+/* Form Container */
+.addsubadmin-form-container {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Form input styles */
+.addsubadmin-input {
+  width: 100%;
+  padding: 18px 20px;
+  border: 2px solid #e0e6ed;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 28px;
+  display: block;
+}
+
+.addsubadmin-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+  transform: translateY(-1px);
+}
+
+.addsubadmin-input::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Button styles */
+.addsubadmin-btn {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.addsubadmin-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.addsubadmin-btn:hover::before {
+  left: 100%;
+}
+
+.addsubadmin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.addsubadmin-btn-primary {
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+}
+
+.addsubadmin-btn-primary:hover {
+  background: linear-gradient(135deg, #357abd, #2968a3);
+}
+
+.addsubadmin-btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.addsubadmin-mt-6 {
+  margin-top: 24px;
+}
+
+/* Message styles */
+.addsubadmin-success {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  margin-top: 20px;
+  animation: slideIn 0.3s ease-out;
+  background: linear-gradient(135deg, #d4edda, #c3e6cb);
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.addsubadmin-success::before {
+  content: "✓";
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  background: #28a745;
+  color: white;
+  flex-shrink: 0;
+}
+
+.addsubadmin-error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  margin-top: 20px;
+  animation: slideIn 0.3s ease-out;
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.addsubadmin-error::before {
+  content: "✕";
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  background: #dc3545;
+  color: white;
+  flex-shrink: 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .addsubadmin-content-main {
+    padding: 20px 16px;
+    align-items: flex-start;
+  }
+
+  .addsubadmin-content-box {
+    padding: 24px;
+    border-radius: 16px;
+    margin-top: 20px;
+    max-width: none;
+  }
+
+  .addsubadmin-title {
+    font-size: 28px;
+  }
+
+  .addsubadmin-form-container {
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .addsubadmin-input {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+
+  .addsubadmin-btn {
+    padding: 14px 28px;
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .addsubadmin-success,
+  .addsubadmin-error {
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .addsubadmin-content-box {
+    padding: 20px;
+  }
+
+  .addsubadmin-form-container {
+    padding: 20px;
+  }
+
+  .addsubadmin-title {
+    font-size: 24px;
+  }
+
+  .addsubadmin-input {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+}

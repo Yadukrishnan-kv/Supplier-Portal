@@ -1,0 +1,628 @@
+/* Container */
+.ListTender-container,
+.tender-details-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Main content area */
+.ListTender-main-content,
+.tender-details-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content spacing */
+.ListTender-content-main,
+.tender-details-page-container {
+  padding: 40px 32px;
+  flex: 1;
+}
+
+/* Content box */
+.ListTender-content-box,
+.tender-details-card {
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid #e6eaf0;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+
+.ListTender-content-box:hover,
+.tender-details-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* Header */
+.ListTender-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f2f5;
+}
+
+.ListTender-title,
+.tender-details-header {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+
+.tender-details-header {
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.tender-details-hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e0e6ed, transparent);
+  margin: 32px 0;
+}
+
+/* Buttons */
+.ListTender-btn {
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ListTender-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ListTender-btn-primary {
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+}
+
+.ListTender-btn-primary:hover {
+  background: linear-gradient(135deg, #357abd, #2968a3);
+}
+
+.ListTender-btn-success {
+  background: linear-gradient(135deg, #56ab2f, #a8e6cf);
+  color: white;
+}
+
+.ListTender-btn-success:hover {
+  background: linear-gradient(135deg, #4e9a2a, #96d4b8);
+}
+
+.ListTender-btn-edit {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: #fff;
+}
+
+.ListTender-btn-edit:hover {
+  background: linear-gradient(135deg, #218838, #1e7e34);
+}
+
+/* Table Container */
+.ListTender-table-container {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Table */
+.ListTender-table,
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-width: 600px; /* Prevent squishing on mobile */
+}
+
+.ListTender-table th,
+.file-table th {
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+  text-align: left;
+  padding: 16px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ListTender-table th:first-child,
+.file-table th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.ListTender-table th:last-child,
+.file-table th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.ListTender-table td,
+.file-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #e8ecf0;
+  font-size: 15px;
+  color: #495057;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.ListTender-table tbody tr:hover td,
+.file-table tbody tr:hover td {
+  background-color: #f8f9ff;
+}
+
+.ListTender-table tbody tr:last-child td,
+.file-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ListTender-table tbody tr:last-child td:first-child,
+.file-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.ListTender-table tbody tr:last-child td:last-child,
+.file-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+.ListTender-action-col {
+  width: 160px;
+  text-align: center;
+}
+
+.ListTender-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.ListTender-icon-btn {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-width: 36px;
+  min-height: 36px;
+}
+
+.ListTender-icon-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ListTender-search {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+}
+
+.ListTender-search:hover {
+  background: linear-gradient(135deg, #3d8bfe, #00d4fe);
+}
+
+.ListTender-delete {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: #fff;
+}
+
+.ListTender-delete:hover {
+  background: linear-gradient(135deg, #ff5252, #e53935);
+}
+
+.ListTender-edit {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: #fff;
+}
+
+.ListTender-edit:hover {
+  background: linear-gradient(135deg, #218838, #1e7e34);
+}
+
+/* Input in edit mode */
+.ListTender-input {
+  padding: 10px 14px;
+  font-size: 14px;
+  width: 95%;
+  border: 2px solid #e0e6ed;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.ListTender-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Messages */
+.ListTender-message,
+.tender-details-message {
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.ListTender-error,
+.tender-details-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.ListTender-empty-state,
+.tender-details-empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.tender-details-empty-state::before {
+  content: "📄";
+  font-size: 40px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Details Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #5f6c84;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #334155;
+  border-bottom: 1px dashed #e0e6ed;
+  padding-bottom: 8px;
+}
+
+.full-width-detail-scope {
+  grid-column: 1 / -1;
+  margin-bottom: 30px;
+}
+
+.detail-textarea-value {
+  padding: 16px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #334155;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  min-height: 80px;
+}
+
+/* Date Grid */
+.date-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 30px;
+}
+
+/* Items Section */
+.items-section {
+  margin-top: 30px;
+}
+
+.items-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 12px;
+}
+
+/* File Download Links */
+.download-link {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid #bfdbfe;
+  transition: all 0.2s ease;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.download-link:hover {
+  background: #bfdbfe;
+  color: #1e3a8a;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(30, 58, 138, 0.1);
+}
+
+.no-files {
+  color: #94a3b8;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* ✅ TABLET VIEW (768px - 1023px) */
+@media (max-width: 1023px) {
+  .ListTender-content-main,
+  .tender-details-page-container {
+    padding: 30px 24px;
+  }
+
+  .ListTender-content-box,
+  .tender-details-card {
+    padding: 24px;
+    border-radius: 14px;
+  }
+
+  .ListTender-title,
+  .tender-details-header {
+    font-size: 26px;
+  }
+
+  .ListTender-table th,
+  .ListTender-table td,
+  .file-table th,
+  .file-table td {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  .ListTender-icon-btn {
+    min-width: 34px;
+    min-height: 34px;
+    padding: 8px;
+  }
+
+  .details-grid,
+  .date-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .detail-label {
+    font-size: 13px;
+  }
+
+  .detail-value {
+    font-size: 15px;
+  }
+
+  .detail-textarea-value {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .download-link {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+
+/* ✅ MOBILE VIEW (≤ 767px) */
+@media (max-width: 767px) {
+  .ListTender-container,
+  .tender-details-container {
+    flex-direction: column;
+  }
+
+  .ListTender-main-content,
+  .tender-details-main-content {
+    padding: 0;
+  }
+
+  .ListTender-content-main,
+  .tender-details-page-container {
+    padding: 20px 16px;
+  }
+
+  .ListTender-content-box,
+  .tender-details-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .ListTender-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .ListTender-title,
+  .tender-details-header {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .ListTender-table-container {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  /* Make tables scrollable */
+  .ListTender-table-container,
+  .items-section,
+  .file-download-section {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 16px;
+  }
+
+  .ListTender-table,
+  .file-table {
+    min-width: 550px;
+    font-size: 13px;
+  }
+
+  .ListTender-table th,
+  .ListTender-table td,
+  .file-table th,
+  .file-table td {
+    padding: 12px 14px;
+  }
+
+  .ListTender-table th,
+  .file-table th {
+    font-size: 12px;
+  }
+
+  .ListTender-actions {
+    gap: 8px;
+  }
+
+  .ListTender-icon-btn {
+    min-width: 32px;
+    min-height: 32px;
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .details-grid,
+  .date-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .detail-label {
+    font-size: 13px;
+  }
+
+  .detail-value {
+    font-size: 14px;
+  }
+
+  .detail-textarea-value {
+    padding: 12px;
+    font-size: 13px;
+    min-height: 60px;
+  }
+
+  .download-link {
+    font-size: 12px;
+    padding: 4px 8px;
+    margin-bottom: 6px;
+  }
+}
+
+/* ✅ SMALL MOBILE (≤ 480px) */
+@media (max-width: 480px) {
+  .ListTender-content-main,
+  .tender-details-page-container {
+    padding: 16px;
+  }
+
+  .ListTender-content-box,
+  .tender-details-card {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .ListTender-title,
+  .tender-details-header {
+    font-size: 22px;
+  }
+
+  .ListTender-table,
+  .file-table {
+    min-width: 500px;
+    font-size: 12px;
+  }
+
+  .ListTender-table th,
+  .ListTender-table td,
+  .file-table th,
+  .file-table td {
+    padding: 10px 12px;
+  }
+
+  .ListTender-table th,
+  .file-table th {
+    font-size: 11px;
+  }
+
+  .ListTender-icon-btn {
+    min-width: 30px;
+    min-height: 30px;
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  .detail-label {
+    font-size: 12px;
+  }
+
+  .detail-value {
+    font-size: 13px;
+  }
+
+  .detail-textarea-value {
+    padding: 10px;
+    font-size: 12px;
+    min-height: 50px;
+  }
+
+  .download-link {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+}

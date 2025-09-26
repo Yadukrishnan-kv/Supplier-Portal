@@ -1,0 +1,353 @@
+/* Container */
+.company-profile-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Main content area */
+.company-profile-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content spacing */
+.company-profile-content-main {
+  padding: 40px 32px;
+  flex: 1;
+}
+
+/* Content box */
+.company-profile-content-box {
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+}
+
+/* Header */
+.company-profile-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #f0f2f5;
+  position: relative;
+}
+
+.company-profile-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.company-profile-subtitle {
+  font-size: 16px;
+  color: #6c757d;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Content Container */
+.company-profile-content-container {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Loading */
+.company-profile-loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+  font-size: 18px;
+}
+
+/* Message styles */
+.company-profile-message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  animation: company-profile-slideIn 0.3s ease-out;
+}
+
+@keyframes company-profile-slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.company-profile-message-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.company-profile-error {
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.company-profile-error .company-profile-message-icon {
+  background: #dc3545;
+  color: white;
+}
+
+/* Step Indicators */
+.company-profile-step-indicators {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.company-profile-step-indicator {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #e5e7eb;
+  color: #6b7280;
+}
+
+.company-profile-step-indicator.completed {
+  background-color: #10b981;
+  color: white;
+}
+
+.company-profile-step-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Form Content */
+.company-profile-form-content {
+  background-color: #f8fafc;
+  padding: 24px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.company-profile-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 20px;
+  border-left: 4px solid #3b82f6;
+  padding-left: 12px;
+}
+
+/* Form Grid */
+.company-profile-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.company-profile-form-grid-custom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.company-profile-form-row {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+}
+
+.company-profile-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-profile-form-group-small {
+  flex: 1;
+}
+
+.company-profile-form-group-large {
+  flex: 2;
+}
+
+.company-profile-form-group-equal {
+  flex: 1;
+}
+
+/* Labels & Values */
+.company-profile-form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.company-profile-form-value {
+  padding: 10px 12px;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #1f2937;
+  min-height: 24px;
+  word-wrap: break-word;
+}
+
+/* Links */
+.company-profile-link {
+  color: #3b82f6;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.company-profile-link:hover {
+  color: #2563eb;
+}
+
+/* Status Banner */
+.company-profile-status-banner {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.company-profile-status-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.company-profile-status-active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.company-profile-status-inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.company-profile-status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Empty State */
+.company-profile-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+  font-size: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 2px dashed #e0e6ed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .company-profile-form-row {
+    flex-direction: column;
+  }
+
+  .company-profile-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-profile-step-indicators {
+    flex-direction: column;
+  }
+}
+/* Navigation Buttons */
+.company-profile-form-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.company-profile-btn {
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.company-profile-btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.company-profile-btn-primary:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.company-profile-btn-primary:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.company-profile-btn-secondary {
+  background-color: #6b7280;
+  color: white;
+}
+
+.company-profile-btn-secondary:hover:not(:disabled) {
+  background-color: #4b5563;
+}
+
+.company-profile-btn-secondary:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Responsive Buttons */
+@media (max-width: 768px) {
+  .company-profile-form-navigation {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .company-profile-btn {
+    width: 100%;
+  }
+}

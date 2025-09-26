@@ -1,0 +1,197 @@
+/* QuotationForm.css */
+
+.quotation-form {
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.quotation-section {
+  margin-bottom: 24px;
+}
+
+.quotation-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #2c3e50;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.quotation-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quotation-table th {
+  background-color: #d1d5da;
+  color: #4b5563;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 14px;
+}
+
+.quotation-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.quotation-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.quotation-table .table-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.quotation-table .read-only {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.add-item-btn {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: all 0.2s ease;
+}
+
+.add-item-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
+
+.remove-row-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.remove-row-btn:hover {
+  background: #dc2626;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.grand-total {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background-color: #f3f4f6;
+  border-top: 1px solid #e5e7eb;
+  border-radius: 0 0 12px 12px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.total-label {
+  color: #6b7280;
+}
+
+.total-amount {
+  color: #1f2937;
+  font-size: 18px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quotation-table th,
+  .quotation-table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+  .table-input {
+    padding: 6px;
+  }
+  .add-item-btn {
+    font-size: 12px;
+  }
+  .grand-total {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}

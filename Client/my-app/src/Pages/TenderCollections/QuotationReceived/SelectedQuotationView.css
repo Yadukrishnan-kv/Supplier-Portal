@@ -1,0 +1,451 @@
+/* SelectedQuotationView.css */
+
+.selected-quotation-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.selected-quotation-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.selected-quotation-content-main {
+  padding: 40px 32px;
+  flex: 1;
+}
+
+.selected-quotation-content-box {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid #e6eaf0;
+}
+
+.selected-quotation-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.selected-quotation-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dropdown */
+.selected-quotation-dropdown {
+  margin-bottom: 32px;
+}
+
+.selected-quotation-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.selected-quotation-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Messages */
+.selected-quotation-message {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.selected-quotation-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Quotation Card */
+.selected-quotation-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-top: 20px;
+}
+
+/* Info Grid */
+.selected-quotation-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+  font-size: 15px;
+  color: #334155;
+}
+
+.selected-quotation-info-grid div {
+  display: flex;
+  gap: 6px;
+}
+
+.selected-quotation-info-grid strong {
+  color: #1e3a8a;
+  min-width: 80px;
+}
+
+/* Table Title */
+.selected-quotation-table-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 12px;
+  color: #1e3a8a;
+}
+
+/* Table */
+.selected-quotation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.selected-quotation-table th,
+.selected-quotation-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  text-align: center;
+}
+
+.selected-quotation-table th {
+  background: #f1f5f9;
+  color: #1e40af;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #d0dce8;
+}
+
+.selected-quotation-table tbody tr:hover td {
+  background-color: #f8fafc;
+}
+
+.selected-grand-total {
+  font-weight: 700;
+  color: #1e3a8a;
+  background: #eff6ff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Notes */
+.selected-notes {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.selected-notes strong {
+  color: #1e3a8a;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Apply Button */
+.apply-margin-btn {
+  padding: 6px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.apply-margin-btn:hover {
+  background-color: #218838;
+}
+
+/* Margin Input */
+.margin-input {
+  width: 80px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Margin Control Row */
+.selected-quotation-margin-control {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.selected-quotation-margin-control .selected-quotation-label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* ✅ RESPONSIVE DESIGN */
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .selected-quotation-content-main {
+    padding: 24px 20px;
+  }
+
+  .selected-quotation-content-box {
+    padding: 24px;
+  }
+
+  .selected-quotation-title {
+    font-size: 24px;
+  }
+
+  .selected-quotation-table th,
+  .selected-quotation-table td {
+    padding: 10px 6px;
+    font-size: 13px;
+  }
+
+  .margin-input {
+    width: 70px;
+    padding: 6px;
+  }
+
+  .apply-margin-btn {
+    padding: 5px 8px;
+    font-size: 13px;
+  }
+
+  .selected-quotation-info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .selected-quotation-container {
+    flex-direction: column;
+  }
+
+  .selected-quotation-main-content {
+    padding: 0;
+  }
+
+  .selected-quotation-content-main {
+    padding: 16px;
+  }
+
+  .selected-quotation-content-box {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .selected-quotation-header {
+    margin-bottom: 20px;
+  }
+
+  .selected-quotation-title {
+    font-size: 22px;
+  }
+
+  .selected-quotation-dropdown,
+  .selected-quotation-margin-control {
+    margin-bottom: 16px;
+  }
+
+  .selected-quotation-select {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .selected-quotation-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .selected-quotation-info-grid strong {
+    min-width: 70px;
+  }
+
+  .selected-quotation-table-title {
+    font-size: 17px;
+    margin: 16px 0 10px;
+  }
+
+  .selected-quotation-table {
+    font-size: 13px;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+  }
+
+  .selected-quotation-table thead,
+  .selected-quotation-table tbody,
+  .selected-quotation-table tr,
+  .selected-quotation-table th,
+  .selected-quotation-table td {
+    display: block;
+  }
+
+  .selected-quotation-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .selected-quotation-table tr {
+    border: 1px solid #e2e8f0;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    padding: 12px 8px;
+  }
+
+  .selected-quotation-table td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .selected-quotation-table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 8px;
+    width: 45%;
+    padding-right: 10px;
+    font-weight: 600;
+    color: #1e40af;
+    text-align: left;
+  }
+
+  /* Add data-label to each td */
+  .selected-quotation-table tbody tr td:nth-of-type(1):before { content: "Item Code"; }
+  .selected-quotation-table tbody tr td:nth-of-type(2):before { content: "Name"; }
+  .selected-quotation-table tbody tr td:nth-of-type(3):before { content: "Part No."; }
+  .selected-quotation-table tbody tr td:nth-of-type(4):before { content: "Manufacturer"; }
+  .selected-quotation-table tbody tr td:nth-of-type(5):before { content: "UOM"; }
+  .selected-quotation-table tbody tr td:nth-of-type(6):before { content: "Qty"; }
+  .selected-quotation-table tbody tr td:nth-of-type(7):before { content: "Unit Price"; }
+  .selected-quotation-table tbody tr td:nth-of-type(8):before { content: "Total"; }
+  .selected-quotation-table tbody tr td:nth-of-type(9):before { content: "Margin"; }
+  .selected-quotation-table tbody tr td:nth-of-type(10):before { content: "Margin Total"; }
+  .selected-quotation-table tbody tr td:nth-of-type(11):before { content: "Apply"; }
+
+  .margin-input {
+    width: 60px;
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  .apply-margin-btn {
+    padding: 6px 10px;
+    font-size: 14px;
+    min-width: 40px;
+  }
+
+  .selected-grand-total {
+    font-size: 16px;
+    padding: 12px;
+    text-align: center;
+  }
+
+  tfoot tr td {
+    display: block;
+    text-align: center !important;
+    padding: 12px 8px !important;
+    font-size: 16px;
+  }
+
+  tfoot tr td:before {
+    display: none;
+  }
+  /* Inside @media (max-width: 767px) */
+
+.selected-quotation-margin-control select {
+  width: 140px; /* Smaller dropdown on mobile */
+  padding: 8px;
+  font-size: 13px;
+}
+
+/* Make Grand Total full width and match card width */
+.selected-grand-total {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+  box-sizing: border-box;
+  margin-top: 12px;
+  padding: 12px;
+  font-size: 16px;
+}
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+  .selected-quotation-content-box {
+    padding: 16px;
+  }
+
+  .selected-quotation-title {
+    font-size: 20px;
+  }
+
+  .selected-quotation-table td {
+    font-size: 12px;
+    padding-left: 45%;
+  }
+
+  .selected-quotation-table td:before {
+    font-size: 12px;
+    left: 6px;
+    width: 40%;
+  }
+
+  .margin-input {
+    width: 55px;
+    font-size: 12px;
+  }
+
+  .apply-margin-btn {
+    padding: 5px 8px;
+    font-size: 13px;
+  }
+
+  .selected-grand-total {
+    font-size: 15px;
+  }
+}
