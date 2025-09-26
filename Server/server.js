@@ -34,7 +34,7 @@ app.get("/api/ping", (req, res) => {
   res.send("Server is running!");
 });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT ;
 app.listen(port, (err) => {
   if (err) {
     console.error("Server failed to start:", err);
