@@ -4,21 +4,25 @@
   align-items: center;
   height: 100vh;
   background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 16px; /* Prevent overflow on small screens */
+  box-sizing: border-box;
 }
 
 .admin-login-form {
   background-color: #fff;
-  padding: 40px;
+  padding: 32px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 400px;
+  box-sizing: border-box;
 }
 
 .admin-login-form h2 {
   text-align: center;
   margin-bottom: 24px;
   color: #333;
+  font-size: 24px;
 }
 
 .form-group {
@@ -38,6 +42,7 @@
   border: 1px solid #ddd;
   border-radius: 6px;
   transition: border 0.3s;
+  font-size: 16px; /* Prevents zoom on iOS */
 }
 
 .form-group input:focus {
@@ -77,6 +82,10 @@ button[type="submit"]:disabled {
   text-align: right;
 }
 
+.forgot-password .link {
+  font-size: 14px;
+}
+
 .signup-link {
   margin-top: 20px;
   text-align: center;
@@ -92,4 +101,31 @@ button[type="submit"]:disabled {
 
 .link:hover {
   text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .admin-login-form {
+    padding: 24px 20px;
+  }
+
+  .admin-login-form h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .form-group input {
+    padding: 12px;
+    font-size: 16px; /* Ensures no auto-zoom on mobile Safari */
+  }
+
+  button[type="submit"] {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .forgot-password,
+  .signup-link {
+    font-size: 13px;
+  }
 }
