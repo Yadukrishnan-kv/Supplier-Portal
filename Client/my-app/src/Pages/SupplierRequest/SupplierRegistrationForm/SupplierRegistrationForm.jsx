@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Sidebar from "../../../components/Sidebar";
-import Header from "../../../components/Header";
+
 import "./SupplierRegistration.css";
 
 const SupplierRegistrationForm = () => {
@@ -624,9 +623,7 @@ const SupplierRegistrationForm = () => {
   if (loading) {
     return (
       <div className="supplier-container">
-        <Sidebar />
         <div className="supplier-main-content">
-          <Header />
           <div className="supplier-content-main">
             <div className="supplier-loading">Submitting...</div>
           </div>
@@ -637,9 +634,8 @@ const SupplierRegistrationForm = () => {
 
   return (
     <div className="supplier-container">
-      <Sidebar />
       <div className="supplier-main-content">
-        <Header />
+       
         <div className="supplier-content-main">
           <div className="supplier-content-box">
             <div className="supplier-header">
