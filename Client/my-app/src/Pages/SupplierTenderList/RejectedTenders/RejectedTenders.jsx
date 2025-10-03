@@ -5,6 +5,7 @@ import axios from "axios";
 import "./RejectedTenders.css";
 import SupplierSidebar from "../../../components/SupplierSidebar";
 import { jwtDecode } from "jwt-decode";
+import Header from "../../../components/Header";
 
 const backendUrl = process.env.REACT_APP_BACKEND_IP;
 
@@ -47,6 +48,7 @@ const RejectedTenders = () => {
       <div className="RejectedTenders-container">
         <SupplierSidebar />
         <div className="RejectedTenders-main-content">
+          <Header />
           <div className="RejectedTenders-content-main">
             <div className="RejectedTenders-content-box">
               <div className="RejectedTenders-header">
@@ -64,6 +66,7 @@ const RejectedTenders = () => {
     <div className="RejectedTenders-container">
       <SupplierSidebar />
       <div className="RejectedTenders-main-content">
+        <Header />
         <div className="RejectedTenders-content-main">
           <div className="RejectedTenders-content-box">
             <div className="RejectedTenders-header">
@@ -88,10 +91,12 @@ const RejectedTenders = () => {
                   <tbody>
                     {tenders.map((tender) => (
                       <tr key={tender._id}>
-                        <td>{tender.projectName}</td>
-                        <td>{tender.organisation}</td>
-                        <td>{new Date(tender.publishingDate).toLocaleDateString()}</td>
-                        <td>
+                        <td data-label="PROJECT NAME">{tender.projectName}</td>
+                        <td data-label="ORGANISATION">{tender.organisation}</td>
+                        <td data-label="PUBLISHING DATE">
+                          {new Date(tender.publishingDate).toLocaleDateString()}
+                        </td>
+                        <td data-label="STATUS">
                           <span className="RejectedTenders-status RejectedTenders-status-rejected">
                             Rejected
                           </span>

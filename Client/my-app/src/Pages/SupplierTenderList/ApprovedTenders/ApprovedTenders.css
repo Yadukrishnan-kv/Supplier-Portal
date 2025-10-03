@@ -191,43 +191,7 @@
   font-size: 16px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .ApprovedTenders-content-main {
-    padding: 20px 16px;
-  }
-  .ApprovedTenders-content-box {
-    padding: 20px;
-    border-radius: 12px;
-  }
-  .ApprovedTenders-header {
-    flex-direction: column;
-    gap: 16px;
-    align-items: stretch;
-  }
-  .ApprovedTenders-title {
-    font-size: 24px;
-    text-align: center;
-  }
-  .ApprovedTenders-table-container {
-    padding: 12px;
-    border-radius: 12px;
-  }
-  .ApprovedTenders-table th,
-  .ApprovedTenders-table td {
-    padding: 12px 8px;
-    font-size: 13px;
-  }
-  .ApprovedTenders-actions {
-    gap: 8px;
-  }
-  .ApprovedTenders-icon-btn {
-    min-width: 120px;
-    min-height: 32px;
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-}
+/* Status Badges */
 .ApprovedTenders-status-badge {
   padding: 6px 12px;
   border-radius: 6px;
@@ -244,7 +208,7 @@
 
 .ApprovedTenders-status-approved {
   background-color: #27ae60;
-   padding: 10px 16px;
+  padding: 10px 16px;
   font-size: 14px;
   border-radius: 10px;
   border: none;
@@ -261,6 +225,7 @@
 .ApprovedTenders-status-rejected {
   background-color: #e74c3c;
 }
+
 /* Quotation Modal Overlay */
 .quotation-modal-overlay {
   position: fixed;
@@ -319,4 +284,81 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ApprovedTenders-content-main {
+    padding: 16px 12px;
+  }
+
+  .ApprovedTenders-content-box {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .ApprovedTenders-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .ApprovedTenders-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .ApprovedTenders-table-container {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  /* Hide table headers on mobile */
+  .ApprovedTenders-table thead {
+    display: none;
+  }
+
+  /* Stack table rows as cards */
+  .ApprovedTenders-table,
+  .ApprovedTenders-table tbody,
+  .ApprovedTenders-table tr,
+  .ApprovedTenders-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .ApprovedTenders-table tr {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid #e8ecf0;
+  }
+
+  .ApprovedTenders-table td {
+    padding: 10px 0 !important;
+    border: none;
+    position: relative;
+    font-size: 15px;
+    color: #495057;
+  }
+
+  /* Show label before each cell */
+  .ApprovedTenders-table td:before {
+    content: attr(data-label) ": ";
+    font-weight: 700;
+    color: #2c3e50;
+    display: inline-block;
+    width: auto;
+    margin-right: 8px;
+  }
+
+  /* Adjust action button */
+  .ApprovedTenders-icon-btn {
+    width: auto;
+    min-width: unset;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
 }

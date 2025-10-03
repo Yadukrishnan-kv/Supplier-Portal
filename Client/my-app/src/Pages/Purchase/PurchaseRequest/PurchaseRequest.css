@@ -128,18 +128,66 @@
 /* Responsive */
 @media (max-width: 768px) {
   .PurchaseRequest-content-main {
-    padding: 20px 16px;
+    padding: 16px 12px;
   }
+
   .PurchaseRequest-content-box {
-    padding: 20px;
+    padding: 16px;
     border-radius: 12px;
   }
+
   .PurchaseRequest-title {
-    font-size: 24px;
+    font-size: 22px;
   }
-  .PurchaseRequest-table th,
+
+  /* Hide table headers on mobile */
+  .PurchaseRequest-table thead {
+    display: none;
+  }
+
+  /* Stack table rows as cards */
+  .PurchaseRequest-table,
+  .PurchaseRequest-table tbody,
+  .PurchaseRequest-table tr,
   .PurchaseRequest-table td {
-    padding: 12px 8px;
-    font-size: 13px;
+    display: block;
+    width: 100%;
+  }
+
+  .PurchaseRequest-table tr {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid #e8ecf0;
+  }
+
+  .PurchaseRequest-table td {
+    padding: 10px 0 !important;
+    border: none;
+    position: relative;
+    font-size: 15px;
+    color: #495057;
+  }
+
+  /* Show label before each cell */
+  .PurchaseRequest-table td:before {
+    content: attr(data-label) ": ";
+    font-weight: 700;
+    color: #2c3e50;
+    display: inline-block;
+    width: auto;
+    margin-right: 8px;
+  }
+
+  /* Ensure icon button stays inline */
+  .PurchaseRequest-icon-btn {
+    margin-top: 4px;
+    width: auto;
+    min-width: 32px;
+    min-height: 32px;
+    padding: 6px;
+    font-size: 14px;
   }
 }

@@ -1,52 +1,52 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import axios from "axios"
-import "./TenderReport.css"
-import Sidebar from "../../../components/Sidebar"
-import Header from "../../../components/Header"
+import { useState, useEffect } from "react";
+import axios from "axios";
+import "./TenderReport.css";
+import Sidebar from "../../../components/Sidebar";
+import Header from "../../../components/Header";
 
-const backendUrl = process.env.REACT_APP_BACKEND_IP
+const backendUrl = process.env.REACT_APP_BACKEND_IP;
 
 const TenderReport = () => {
-  const [tenders, setTenders] = useState([])
-  const [filteredTenders, setFilteredTenders] = useState([])
-  const [projectNameSearch, setProjectNameSearch] = useState("")
-  const [dateFrom, setDateFrom] = useState("")
-  const [dateTo, setDateTo] = useState("")
+  const [tenders, setTenders] = useState([]);
+  const [filteredTenders, setFilteredTenders] = useState([]);
+  const [projectNameSearch, setProjectNameSearch] = useState("");
+  const [dateFrom, setDateFrom] = useState("");
+  const [dateTo, setDateTo] = useState("");
 
   useEffect(() => {
     axios
       .get(`${backendUrl}/api/tenders`)
       .then((res) => {
-        const data = res.data.data || []
-        setTenders(data)
-        setFilteredTenders(data)
+        const data = res.data.data || [];
+        setTenders(data);
+        setFilteredTenders(data);
       })
-      .catch((err) => console.error("Error fetching tenders:", err))
-  }, [])
+      .catch((err) => console.error("Error fetching tenders:", err));
+  }, []);
 
   const handleSearch = () => {
-    let filtered = tenders
+    let filtered = tenders;
 
     if (projectNameSearch) {
       filtered = filtered.filter((t) =>
         t.projectName.toLowerCase().includes(projectNameSearch.toLowerCase())
-      )
+      );
     }
 
     if (dateFrom) {
-      const fromDate = new Date(dateFrom)
-      filtered = filtered.filter((t) => new Date(t.publishingDate) >= fromDate)
+      const fromDate = new Date(dateFrom);
+      filtered = filtered.filter((t) => new Date(t.publishingDate) >= fromDate);
     }
 
     if (dateTo) {
-      const toDate = new Date(dateTo)
-      filtered = filtered.filter((t) => new Date(t.publishingDate) <= toDate)
+      const toDate = new Date(dateTo);
+      filtered = filtered.filter((t) => new Date(t.publishingDate) <= toDate);
     }
 
-    setFilteredTenders(filtered)
-  }
+    setFilteredTenders(filtered);
+  };
 
   return (
     <div className="TenderReport-container">
@@ -101,10 +101,12 @@ const TenderReport = () => {
                   {filteredTenders.length > 0 ? (
                     filteredTenders.map((t) => (
                       <tr key={t._id}>
-                        <td>{t.projectName}</td>
-                        <td>{t.projectTitle}</td>
-                        <td>{t.organisation}</td>
-                        <td>{new Date(t.publishingDate).toLocaleDateString()}</td>
+                        <td data-label="PROJECT NAME">{t.projectName}</td>
+                        <td data-label="PROJECT TITLE">{t.projectTitle}</td>
+                        <td data-label="ORGANISATION">{t.organisation}</td>
+                        <td data-label="PUBLISHED DATE">
+                          {new Date(t.publishingDate).toLocaleDateString()}
+                        </td>
                       </tr>
                     ))
                   ) : (
@@ -117,13 +119,11 @@ const TenderReport = () => {
                 </tbody>
               </table>
             </div>
-
-       
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TenderReport
+export default TenderReport;

@@ -2,6 +2,7 @@ import React from "react";
 import Sidebar from "../../../components/Sidebar";
 import Header from "../../../components/Header";
 import "./PurchaseOrder.css";
+
 const PurchaseOrder = () => {
   return (
     <div className="PurchaseOrder-container">
@@ -28,24 +29,24 @@ const PurchaseOrder = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>MOD09620214</td>
-                    <td>IT Support</td>
-                    <td>ABC Supplier</td>
-                    <td>Feb 26, 2021</td>
-                    <td>Mar 06, 2021</td>
-                    <td>
+                    <td data-label="Marjan Ref. No.">MOD09620214</td>
+                    <td data-label="Project Title">IT Support</td>
+                    <td data-label="Supplier Name">ABC Supplier</td>
+                    <td data-label="Published Date">Feb 26, 2021</td>
+                    <td data-label="Closing Date">Mar 06, 2021</td>
+                    <td data-label="View">
                       <button className="PurchaseOrder-icon-btn PurchaseOrder-search">
                         🔍
                       </button>
                     </td>
                   </tr>
                   <tr>
-                    <td>Marjan12345</td>
-                    <td>Requirement for IT support</td>
-                    <td>ABC Supplier</td>
-                    <td>Mar 01, 2021</td>
-                    <td>Mar 31, 2021</td>
-                    <td>
+                    <td data-label="Marjan Ref. No.">Marjan12345</td>
+                    <td data-label="Project Title">Requirement for IT support</td>
+                    <td data-label="Supplier Name">ABC Supplier</td>
+                    <td data-label="Published Date">Mar 01, 2021</td>
+                    <td data-label="Closing Date">Mar 31, 2021</td>
+                    <td data-label="View">
                       <button className="PurchaseOrder-icon-btn PurchaseOrder-search">
                         🔍
                       </button>

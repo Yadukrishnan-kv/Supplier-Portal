@@ -218,11 +218,11 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .ListSubadmin-content-main {
-    padding: 20px 16px;
+    padding: 16px 12px;
   }
 
   .ListSubadmin-content-box {
-    padding: 20px;
+    padding: 16px;
     border-radius: 12px;
   }
 
@@ -233,7 +233,7 @@
   }
 
   .ListSubadmin-title {
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
   }
 
@@ -242,19 +242,65 @@
     border-radius: 12px;
   }
 
-  .ListSubadmin-table th,
+  /* Hide table headers on mobile */
+  .ListSubadmin-table thead {
+    display: none;
+  }
+
+  /* Stack table rows as cards */
+  .ListSubadmin-table,
+  .ListSubadmin-table tbody,
+  .ListSubadmin-table tr,
   .ListSubadmin-table td {
-    padding: 12px 8px;
-    font-size: 13px;
+    display: block;
+    width: 100%;
+  }
+
+  .ListSubadmin-table tr {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid #e8ecf0;
+  }
+
+  .ListSubadmin-table td {
+    padding: 10px 0 !important;
+    border: none;
+    position: relative;
+    font-size: 15px;
+    color: #495057;
+  }
+
+  /* Show label before each cell */
+  .ListSubadmin-table td:before {
+    content: attr(data-label) ": ";
+    font-weight: 700;
+    color: #2c3e50;
+    display: inline-block;
+    width: auto;
+    margin-right: 8px;
+  }
+
+  /* Adjust input width in edit mode */
+  .ListSubadmin-input {
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .ListSubadmin-actions {
-    gap: 8px;
-  }
+  display: flex;
+  flex-direction: row; 
+  gap: 8px;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
 
-  .ListSubadmin-icon-btn {
-    min-width: 32px;
-    min-height: 32px;
-    padding: 8px;
+  .ListSubadmin-icon-btn,
+  .ListSubadmin-btn-success {
+    min-width: auto;
+    padding: 8px 12px;
+    font-size: 13px;
   }
 }

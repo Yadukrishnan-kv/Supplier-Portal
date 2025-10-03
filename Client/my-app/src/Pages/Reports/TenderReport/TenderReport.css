@@ -190,11 +190,11 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .TenderReport-content-main {
-    padding: 20px 16px;
+    padding: 16px 12px;
   }
 
   .TenderReport-content-box {
-    padding: 20px;
+    padding: 16px;
     border-radius: 12px;
   }
 
@@ -205,7 +205,7 @@
   }
 
   .TenderReport-title {
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
   }
 
@@ -224,10 +224,45 @@
     border-radius: 12px;
   }
 
-  .TenderReport-table th,
+  /* Hide table headers on mobile */
+  .TenderReport-table thead {
+    display: none;
+  }
+
+  /* Stack table rows as cards */
+  .TenderReport-table,
+  .TenderReport-table tbody,
+  .TenderReport-table tr,
   .TenderReport-table td {
-    padding: 12px 8px;
-    font-size: 13px;
+    display: block;
+    width: 100%;
+  }
+
+  .TenderReport-table tr {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid #e8ecf0;
+  }
+
+  .TenderReport-table td {
+    padding: 10px 0 !important;
+    border: none;
+    position: relative;
+    font-size: 15px;
+    color: #495057;
+  }
+
+  /* Show label before each cell */
+  .TenderReport-table td:before {
+    content: attr(data-label) ": ";
+    font-weight: 700;
+    color: #2c3e50;
+    display: inline-block;
+    width: auto;
+    margin-right: 8px;
   }
 
   .TenderReport-footer {

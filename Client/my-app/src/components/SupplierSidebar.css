@@ -214,3 +214,53 @@
 .suppliersidebar::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
 }
+
+/* Mobile Hamburger Button */
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 16px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 35px;
+  border-radius: 6px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767.98px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .suppliersidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    height: 100vh;
+    width: 280px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .suppliersidebar.mobile-open {
+    transform: translateX(0);
+  }
+}
+
+/* Desktop/Tablet: keep sidebar visible */
+@media (min-width: 768px) {
+  .suppliersidebar {
+    position: static;
+    transform: none;
+    width: 280px;
+  }
+}

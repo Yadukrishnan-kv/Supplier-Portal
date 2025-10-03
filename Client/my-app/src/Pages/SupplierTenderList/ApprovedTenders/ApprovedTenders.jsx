@@ -6,6 +6,7 @@ import "./ApprovedTenders.css";
 import SupplierSidebar from "../../../components/SupplierSidebar";
 import { jwtDecode } from "jwt-decode";
 import QuotationForm from "../ApprovedTenders/QuotationForm";
+import Header from "../../../components/Header";
 
 const backendUrl = process.env.REACT_APP_BACKEND_IP;
 
@@ -133,6 +134,7 @@ const ApprovedTenders = () => {
     <div className="ApprovedTenders-container">
       <SupplierSidebar />
       <div className="ApprovedTenders-main-content">
+         <Header />
         <div className="ApprovedTenders-content-main">
           <div className="ApprovedTenders-content-box">
             <div className="ApprovedTenders-header">
@@ -166,15 +168,17 @@ const ApprovedTenders = () => {
 
                       return (
                         <tr key={tender._id}>
-                          <td>{tender.projectName}</td>
-                          <td>{tender.organisation}</td>
-                          <td>{new Date(tender.publishingDate).toLocaleDateString()}</td>
-                          <td>
+                          <td data-label="PROJECT NAME">{tender.projectName}</td>
+                          <td data-label="ORGANISATION">{tender.organisation}</td>
+                          <td data-label="PUBLISHING DATE">
+                            {new Date(tender.publishingDate).toLocaleDateString()}
+                          </td>
+                          <td data-label="STATUS">
                             <span className="ApprovedTenders-status ApprovedTenders-status-approved">
                               Approved
                             </span>
                           </td>
-                          <td>
+                          <td data-label="ACTIONS">
                             <button
                               className="ApprovedTenders-icon-btn"
                               onClick={() => handleOpenQuotationForm(tender)}

@@ -181,6 +181,9 @@
   font-size: 14px;
   background-color: white;
   cursor: pointer;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .supplier-form-file:focus {
@@ -345,5 +348,19 @@
 
   .supplier-form-categories {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .supplier-form-group-equal input[type="file"] {
+    width: 100%;
+  }
+
+  .supplier-form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .supplier-form-group-equal {
+    width: 100%;
   }
 }

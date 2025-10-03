@@ -191,43 +191,7 @@
   font-size: 16px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .RejectedTenders-content-main {
-    padding: 20px 16px;
-  }
-  .RejectedTenders-content-box {
-    padding: 20px;
-    border-radius: 12px;
-  }
-  .RejectedTenders-header {
-    flex-direction: column;
-    gap: 16px;
-    align-items: stretch;
-  }
-  .RejectedTenders-title {
-    font-size: 24px;
-    text-align: center;
-  }
-  .RejectedTenders-table-container {
-    padding: 12px;
-    border-radius: 12px;
-  }
-  .RejectedTenders-table th,
-  .RejectedTenders-table td {
-    padding: 12px 8px;
-    font-size: 13px;
-  }
-  .RejectedTenders-actions {
-    gap: 8px;
-  }
-  .RejectedTenders-icon-btn {
-    min-width: 120px;
-    min-height: 32px;
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-}
+/* Status Badges */
 .RejectedTenders-status-badge {
   padding: 6px 12px;
   border-radius: 6px;
@@ -248,4 +212,73 @@
 
 .RejectedTenders-status-rejected {
   background-color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .RejectedTenders-content-main {
+    padding: 16px 12px;
+  }
+
+  .RejectedTenders-content-box {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .RejectedTenders-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .RejectedTenders-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .RejectedTenders-table-container {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  /* Hide table headers on mobile */
+  .RejectedTenders-table thead {
+    display: none;
+  }
+
+  /* Stack table rows as cards */
+  .RejectedTenders-table,
+  .RejectedTenders-table tbody,
+  .RejectedTenders-table tr,
+  .RejectedTenders-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .RejectedTenders-table tr {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid #e8ecf0;
+  }
+
+  .RejectedTenders-table td {
+    padding: 10px 0 !important;
+    border: none;
+    position: relative;
+    font-size: 15px;
+    color: #495057;
+  }
+
+  /* Show label before each cell */
+  .RejectedTenders-table td:before {
+    content: attr(data-label) ": ";
+    font-weight: 700;
+    color: #2c3e50;
+    display: inline-block;
+    width: auto;
+    margin-right: 8px;
+  }
 }

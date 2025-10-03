@@ -9,7 +9,6 @@ const Content = () => {
         {/* Placeholder for dynamic content */}
         <h1 className="content-title">Welcome to the Dashboard</h1>
         <p className="content-text">
-          This is where your dynamic content will go.
         </p>
       </div>
     </main>

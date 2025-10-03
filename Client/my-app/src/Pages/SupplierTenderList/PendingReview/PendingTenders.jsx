@@ -5,6 +5,7 @@ import axios from "axios";
 import "./PendingTenders.css";
 import SupplierSidebar from "../../../components/SupplierSidebar";
 import { jwtDecode } from "jwt-decode";
+import Header from "../../../components/Header";
 
 const backendUrl = process.env.REACT_APP_BACKEND_IP;
 
@@ -47,6 +48,7 @@ const PendingTenders = () => {
       <div className="PendingTenders-container">
         <SupplierSidebar />
         <div className="PendingTenders-main-content">
+          <Header />
           <div className="PendingTenders-content-main">
             <div className="PendingTenders-content-box">
               <div className="PendingTenders-header">
@@ -64,6 +66,7 @@ const PendingTenders = () => {
     <div className="PendingTenders-container">
       <SupplierSidebar />
       <div className="PendingTenders-main-content">
+        <Header />
         <div className="PendingTenders-content-main">
           <div className="PendingTenders-content-box">
             <div className="PendingTenders-header">
@@ -88,10 +91,12 @@ const PendingTenders = () => {
                   <tbody>
                     {tenders.map((tender) => (
                       <tr key={tender._id}>
-                        <td>{tender.projectName}</td>
-                        <td>{tender.organisation}</td>
-                        <td>{new Date(tender.publishingDate).toLocaleDateString()}</td>
-                        <td>
+                        <td data-label="PROJECT NAME">{tender.projectName}</td>
+                        <td data-label="ORGANISATION">{tender.organisation}</td>
+                        <td data-label="PUBLISHING DATE">
+                          {new Date(tender.publishingDate).toLocaleDateString()}
+                        </td>
+                        <td data-label="STATUS">
                           <span className="PendingTenders-status PendingTenders-status-pending">
                             Pending
                           </span>

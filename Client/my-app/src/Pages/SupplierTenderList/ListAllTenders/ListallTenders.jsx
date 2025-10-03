@@ -5,6 +5,7 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode"; // Make sure to install: npm install jwt-decode
 import "./ListallTenders.css";
 import SupplierSidebar from "../../../components/SupplierSidebar";
+import Header from "../../../components/Header";
 
 const backendUrl = process.env.REACT_APP_BACKEND_IP;
 
@@ -143,6 +144,7 @@ const ListallTenders = () => {
       <div className="ListallTenders-container">
         <SupplierSidebar />
         <div className="ListallTenders-main-content">
+          
           <div className="ListallTenders-content-main">
             <div className="ListallTenders-content-box">
               <div className="ListallTenders-header">
@@ -160,11 +162,11 @@ const ListallTenders = () => {
     <div className="ListallTenders-container">
       <SupplierSidebar />
       <div className="ListallTenders-main-content">
+         <Header />
         <div className="ListallTenders-content-main">
           <div className="ListallTenders-content-box">
             <div className="ListallTenders-header">
               <h2 className="ListallTenders-title">List of RFQ/RFP</h2>
-              
             </div>
 
             {error && (
@@ -191,10 +193,12 @@ const ListallTenders = () => {
                       const status = getInterestStatus(tender);
                       return (
                         <tr key={tender._id}>
-                          <td>{tender.projectName}</td>
-                          <td>{tender.organisation}</td>
-                          <td>{new Date(tender.publishingDate).toLocaleDateString()}</td>
-                          <td className="ListallTenders-status">
+                          <td data-label="PROJECT NAME">{tender.projectName}</td>
+                          <td data-label="ORGANISATION">{tender.organisation}</td>
+                          <td data-label="PUBLISHING DATE">
+                            {new Date(tender.publishingDate).toLocaleDateString()}
+                          </td>
+                          <td data-label="STATUS" className="ListallTenders-status">
                             {status ? (
                               <span
                                 className={`ListallTenders-status-badge ListallTenders-status-${status.toLowerCase()}`}
